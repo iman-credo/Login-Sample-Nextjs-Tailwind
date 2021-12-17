@@ -16,3 +16,5 @@ then run command:
 ```
 npm run dev
 ```
+![image](https://user-images.githubusercontent.com/52355394/146580482-08eddc4f-01b0-4d60-b3a2-f2085d2e00ed.png)
+
