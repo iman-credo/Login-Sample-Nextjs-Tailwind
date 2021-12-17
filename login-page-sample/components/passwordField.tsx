@@ -2,16 +2,21 @@ import * as React from 'react';
 
 
 interface PasswordFieldProps {
-    label: string
+    label: string,
+    onChange(value: string): void
 }
 const PasswordField = (props: PasswordFieldProps) => {
+
+    const handleChange = (e: any) => {
+        props.onChange(e.target.value);
+    }
+
     return <div>
-        <label className="text-gray-700 text-sm font-bold mb-2 p-5">
-            {props.label}
-        </label>
-        <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-red-400"
+        <input className="shadow appearance-none border rounded-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-red-700"
             type="password"
-            placeholder={props.label} />
+            placeholder={props.label}
+            onChange={handleChange}>
+        </input>
     </div>
 }
 
